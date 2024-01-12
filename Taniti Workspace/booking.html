@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taniti - Booking</title>
+  <meta name="description" content="Taniti Traveler's Guide">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body style="background-image: url(fish.jpg); background-repeat: repeat-x;";>
+     <!-- Header -->
+     <div class="header">
+        <div class="stamp" >	
+          <a href="Taniti_Home.html">
+            <img id="stamp_img" src="island.jpg" />
+          </a>
+        </div>
+      
+   
+       <div id="booking"><a href=#navbar><img src="book2.png"></a></div>
+        
+       </div>
+   
+        <!-- Navbar -->
+     <div id="navbar">
+      <a href="Taniti_Home.html">Home</a>
+      <a class="active" href="booking.html#navbar">Booking</a>
+      <a href="Transportation.html#navbar">Getting around Taniti:</a>
+      <a href="Food.html#navbar">What to Eat:</a>
+      <a href="Entertainment.html#navbar">What to Do:</a>
+      
+    </div>
+
+<!-- Main page content -->
+<div style="background-color: #333; width: 100%; text-align: center; color: white;">
+  <br>
+  <br>
+  <h3>
+  <h1>Vacation Package Types:</h1>
+  <ul style="list-style-type: disc ;">
+    <li>Family Vacation</li>
+    <li>Vacation</li>
+    <li>Honeymoon/Wedding/Couples Retreat</li>
+    <li>Business</li>
+    <li>Event</li>
+    <li>Custom</li>
+  </ul>
+  <br>
+  <img style="display: inline;" src="postcard.jpeg">
+  <br>
+  <hr>
+
+  Lodging: Taniti has a wide variety of lodging that ranges from an inexpensive hostel to one large,
+  four-star resort. There are many small, family-owned hotels and a growing number of bed and breakfasts.
+   All types of lodging are strictly regulated and regularly inspected by the Tanitian government.
+   <br>
+   <hr>
+  </h3> 
+   <br>
+   <div  style="background-color: black;" id="form_div">
+    <!-- Length of stay, number in group, country of origin -->
+    <div id="form_left">
+      <h1>Contact an agent now!</h1><br>
+
+      <form>
+        <label for="fname">First Name</label><br>
+        <input type="text" name="fname">
+        <br>
+        <label>Last Name</label><br>
+        <input type="text">
+        <br>
+        <label>Age</label><br>
+        <input type="text">
+        <br>
+        <label for="quantity">Number of travelers:</label>
+        <br>
+        <input type="number" id="quantity" name="quantity" min="1" max="20">
+        <br>
+        <label>Vacation type:</label><br>
+        <input type="radio" name="vacation_type" id="vacation">
+      <label for="vacation">Vacation/Family Vacation</label><br>
+      <input type="radio" name="vacation_type" id="wedding">
+      <label for="wedding">Wedding/Honeymoon/Couples Retreat</label><br>
+      <input id="business" type="radio" name="vacation_type">
+      <label for="business">Business</label><br>
+      <input id="event" type="radio" name="vacation_type">
+      <label for="event">Event</label><br>
+      <input id="other" type="radio" name="vacation_type">
+      <label for="other">Other</label><br>
+    
+        <input type="submit">
+      </form>
+    </div>
+    <div id="form_right">
+      <h2>Please choose the date for your trip:</h2>
+      <img src="datepicker.png">
+    </div>
+   
+</div>
+</div>
+
+
+<div class="grid_parent" id="booking_content">
+  
+  
+  
+ <div class="sand_div">
+  <div class="grid_child">
+  
+    <img class="grid_img" src="stars.jpg">
+  </div>
+</div>
+
+<div class="water_div" id="resort">
+  <div class="grid_child">
+    4-Star Resort Content
+
+ 
+</div>
+</div>
+
+
+</div>
+
+<!-- copy -->
+<div class="grid_parent" id="booking_content">
+  
+  
+ 
+ <div class="water_div">
+   <div class="grid_child">
+   
+ 
+    <img class="grid_img" src="room.jpg">
+ </div>
+ </div>
+
+ <div class="sand_div" id="hotel">
+  <div class="grid_child">
+    Hotel content
+  </div>
+</div>
+ 
+ 
+ </div>
+
+ <!--copy-->
+ <div class="grid_parent" id="booking_content">
+  
+  <div class="sand_div">
+   <div class="grid_child">
+    <img class="grid_img" src="hostel.jpeg">
+   </div>
+ </div>
+ 
+ <div class="water_div" id="hostel">
+   <div class="grid_child">
+   
+ 
+   Hostel content
+ </div>
+ </div>
+ 
+ 
+ </div>
+
+
+
+
+
+ <!-- Footer -->
+ <div class="footer">
+   
+
+    
+    <img src="social.png">
+    <br>
+    2023 © Tanitian Governing Authority. All Rights Reserved.
+
+
+ </div>
+
+<script>
+ // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+var booking = document.getElementById("booking");
+
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+var sticky2 = booking.offsetTop;
+
+function myFunction2(){
+ if(window.pageYOffset >= sticky2){
+   booking.classList.add("sticky2");
+   
+ } else {
+   booking.classList.remove("sticky2");
+ }
+}
+
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+ if (window.pageYOffset >= sticky) {
+   navbar.classList.add("sticky");
+
+ } else {
+   navbar.classList.remove("sticky");
+
+ }
+}
+</script>
+
+</body>
+</html>

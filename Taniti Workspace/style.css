@@ -1,0 +1,486 @@
+
+/* Style the navbar */
+#navbar {
+  position:sticky;
+  min-height: 20px;
+  font-size: larger;
+  font-style: bold;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #333;
+  display: block;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left:0;
+  z-index: 999;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  margin-right: 0%;
+  width: fit-content;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
+
+#navbar a.active {
+  background-color: #e26218;
+  color: white;
+}
+
+
+
+.header{
+  width: 100%;
+  font-size: 30px;
+  color: #e26218;
+  height: 600px;
+  background-color: #9afafa;
+  background-image: url("taniti_island.jpg");
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  list-style-type: none;
+}
+
+/*Testing a stamp effect*/
+.stamp {
+	width: 280px;
+	height: 180px;
+	display: block;
+	padding: 10px;
+	background: white;
+	position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
+	/*The stamp cutout will be created using crisp radial gradients*/
+	background: radial-gradient(
+		transparent 0px, 
+		transparent 4px, 
+		white 4px,
+		white
+	);
+  
+	/*reducing the gradient size*/
+	background-size: 20px 20px;
+	/*Offset to move the holes to the edge*/
+	background-position: -10px -10px;
+}
+.stamp:after {
+	content: '';
+	position: absolute;
+	/*We can shrink the pseudo element here to hide the shadow edges*/
+	left: 5px; top: 5px; right: 5px; bottom: 5px;
+	/*Shadow - doesn't look good because of the stamp cutout. We can still move this into another pseudo element behind the .stamp main element*/
+	
+  box-shadow: 2 2 20px 1px rgba(0, 0, 0, 0.5);
+	/*pushing it back*/
+	z-index: -1;
+}
+/*Some text*/
+.stamp:before {
+	content: 'Island of Taniti';
+	position: absolute;
+	bottom: 5; left: 0;
+	font: bold 24px arial;
+	color: rgb(119, 84, 84);
+	opacity: 0.75;
+	line-height: 100%;
+	padding: 20px;
+}
+#stamp_img {
+  width: 280px;
+  height: 180px;
+ 
+}
+
+#booking{
+
+ position: sticky;
+ top: 70%;
+ left: 70%;
+ opacity: 1;
+}
+
+#form_div{
+  display: flex;
+  padding: 10px;
+}
+
+#form_left{
+  display: block;
+  width: 50%;
+  text-align: left;
+  margin-left: 50px;
+}
+
+#form_right{
+  display: block;
+  width: 50%;
+}
+
+#form_right img{
+  height: 80%;
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body, div, p{
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+
+
+
+
+
+/* Page content */
+.content {
+ background-color: #e26218;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky2{
+  position: sticky;
+  top: 20;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 16px;
+}
+
+
+
+
+
+
+
+
+
+#logo{
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  max-width: max-content;
+  position: inherit;
+}
+
+p, ul{
+  font-size: 20px;
+  text-indent: 10px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+body{
+    margin:0;
+    padding: 0;
+    background-image: url(tropical.webp);
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: scroll;
+    overflow-x: hidden;
+   
+}
+
+
+/* HOME PAGE CONTENT */
+.sand2_div{
+  background-image: url(sand2.jpg);
+
+}
+.sand_div{
+  background-image: url(sand.jpg);
+  background: linear-gradient(rgba(0,0,0,1));
+  width: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 10px 10px 5px lightblue inset;
+}
+
+.water_div{
+  
+  position: relative;
+  
+  width: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.water_div::before{
+  content: "";
+  background-image: url(water.jpg);
+  position: absolute;
+  z-index: -1;
+  opacity: .75;
+  width: 100%;
+  height: 100%;
+}
+
+#home_parent{
+  display: flex;
+  
+}
+/* Desktops   */
+@media only screen and (min-width: 1224px) {
+  .header{
+    height: 800px;
+  }
+}
+
+/* Laptops   */
+@media only screen and (min-width: 1000px) {
+  .header{
+    height: 700px;
+  }
+}
+
+@media (max-width: 600px){
+  #home_left{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px){
+  #home_parent{
+    flex-direction: column;
+    flex-shrink: 0;
+    min-width: fit-content;
+  }
+  
+}
+#home_left{
+  
+  width: 50%;
+  border: 2px dashed #e26218;
+  border-radius: 25px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  
+}
+
+#home_left::before{
+  background-image: url(sand.jpg);
+  content: "";
+  position: absolute;
+  opacity: .75;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+
+
+
+#home_right{
+  
+  width: 50%;
+  
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  border: 2px dashed #e26218;
+  border-radius: 25px;
+}
+
+#home_right::before{
+  background-image: url(water.jpg);
+  content: "";
+  position: absolute;
+  opacity: .75;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+
+
+
+#map{
+  color: white;
+  background-color: rgb(227, 209, 173);
+  margin: 100px;
+  padding: 20px;
+  opacity: .9;
+  border: 2px solid #e26218;
+  
+  
+  text-align: center;
+  border-radius: 15px;;
+  overflow: auto;
+}
+
+#about_the_island{
+  color: white;
+  margin: 100px;
+  padding: 20px;
+  border: 2px solid #e26218;
+  border-radius: 25px;
+  background-color: rgb(7, 99, 135);
+
+}
+
+#about_the_island2{
+  color: black;
+  margin: 100px;
+  padding: 20px;
+  border: 2px solid #e26218;
+  border-radius: 25px;
+  background-color: rgb(227, 209, 173);
+}
+
+
+
+#faqs{
+  color: white;
+  background-color: rgb(7, 99, 135);;
+  margin: 100px;
+  padding: 20px;
+  opacity: .9;
+  border: 2px solid #e26218;
+  border-radius: 25px;
+}
+
+
+/*flex containers for all pages*/
+@media (max-width: 600px){
+  .grid_parent{
+    flex-direction: column;
+    flex-shrink: 0;
+    width: max-content;
+  }
+  
+}
+
+.grid_parent{
+  display: flex;
+  font-size: larger;
+}
+
+.grid_child{
+  overflow: auto;
+  font-size: x-large;
+  height: 400px;
+  color: rgb(155, 90, 6);
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  opacity: .9;
+  border: 2px dashed #e26218;
+  border-radius: 25px;
+  width: 50%;
+  
+  
+}
+
+.big_child{
+  height: 300px;
+  color: rgb(32, 32, 32);
+  background-color: black;
+  margin : 10px;
+  padding: 10px;
+  opacity: 1;
+  border: 2px dashed #e26218;
+  border-radius: 25px;
+  width: 100%;
+  overflow: scroll;
+}
+
+.grid_img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+  border-radius: 8px;
+  
+}
+
+.grid_child:hover{
+  opacity: 1;
+}
+
+
+
+
+.footer{
+  color: white;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+/* booking content */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

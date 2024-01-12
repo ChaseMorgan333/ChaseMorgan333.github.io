@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taniti - Booking</title>
+  <meta name="description" content="Taniti Traveler's Guide">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+     <!-- Header -->
+     <div class="header">
+        <div class="stamp" >	
+          <a href="Taniti_Home.html">
+            <img id="stamp_img" src="island.jpg" />
+          </a>
+        </div>
+      
+   
+       <div id="booking"><a href="booking.html#navbar"><img src="book2.png"></a></div>
+        
+       </div>
+   
+            <!-- Navbar -->
+     <div id="navbar">
+        <a href="Taniti_Home.html">Home</a>
+        <a href="booking.html#navbar">Booking</a>
+        <a href="Transportation.html#navbar">Getting around Taniti:</a>
+        <a href="Food.html#navbar">What to Eat:</a>
+        <a class="active" href="Entertainment.html#navbar">What to Do:</a>
+        
+      </div>
+
+<!-- Main page content -->
+<div class="grid_parent">
+
+  <div class="grid_child"><b>
+    Entertainment: Most people visit Taniti to enjoy the beaches, explore the rainforest, and to visit 
+the volcano. However, there are other things to do, including visiting a local history museum, 
+going on chartered fishing tours, snorkeling, zip-lining in the rainforest, visiting several pubs,
+ including a microbrewery, dancing at a new dance club, seeing a movie, taking helicopter rides, 
+ playing at an arcade, visiting art galleries, and bowling. Also, a nine-hole golf course should be 
+ operational by next year. Many of these activities are located in Merriton Landing, which is a rapidly
+  developing area on the north side of Yellow Leaf Bay. 
+</b>
+
+
+  </div>
+
+  <div class="grid_child">
+    <img class="grid_img" src="taniti.jpg">
+  </div>
+
+</div>
+
+<div class="grid_parent">
+
+  <div class="grid_child">
+    <img class="grid_img" src="volcano.jpg">
+  </div>
+
+  <div class="grid_child"><b>
+    Sightseeing: Most tourists spend most of their time in Taniti City, which boasts native architecture 
+and nearby white, sandy beaches that encircle Yellow Leaf Bay. Other popular activities include boat 
+or bus tours of the island, hikes in the rainforest, or visits to Taniti’s active volcano.
+</b>
+
+  </div>
+
+</div>
+
+ <!-- Footer -->
+ <div class="footer">
+   
+
+    
+    <img src="social.png">
+    <br>
+    2023 © Tanitian Governing Authority. All Rights Reserved.
+
+
+ </div>
+
+<script>
+ // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+var booking = document.getElementById("booking");
+
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+var sticky2 = booking.offsetTop;
+
+function myFunction2(){
+ if(window.pageYOffset >= sticky2){
+   booking.classList.add("sticky2");
+   
+ } else {
+   booking.classList.remove("sticky2");
+ }
+}
+
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+ if (window.pageYOffset >= sticky) {
+   navbar.classList.add("sticky");
+
+ } else {
+   navbar.classList.remove("sticky");
+
+ }
+}
+</script>
+
+</body>
+</html>
